@@ -16,11 +16,14 @@ public static void main(String[] args) throws IOException {
 try {
 	BufferedReader br = new BufferedReader(new FileReader("src/intro_to_file_io/encrypt.txt"));
 	String line = br.readLine();
+	String message = "";
 	while(line != null){
 		int i = Integer.parseInt(line);
-Character.toString((char)i);
-			System.out.println(i);
+String x = Character.toString((char)i);
+			line = br.readLine();
+			message +=x;
 }
+	System.out.println(message);
 	}
 	catch (FileNotFoundException e) {
 	// TODO Auto-generated catch block
