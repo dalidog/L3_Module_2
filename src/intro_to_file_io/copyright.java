@@ -10,17 +10,8 @@ public class copyright {
 public static void main(String[] args) {
 	BufferedReader br;
 	try {
-		br = new BufferedReader(new FileReader("src/intro_to_file_io/encrypt.txt"));
-		String line = br.readLine();
-		String verylongstring = "";
-		while(line != null) {
-			verylongstring +=line+ "\n";
-line = br.readLine();
-		}
-		verylongstring+="//Copyright © 2017 by Dalia Sebat";
-		System.out.println(verylongstring);
-		FileWriter encrypt = new FileWriter("src/intro_to_file_io/encrypt.txt");
-		encrypt.write(verylongstring);
+		FileWriter encrypt = new FileWriter("src/intro_to_file_io/encrypt.txt", true);
+		encrypt.write("\n //Copyright © 2017 by Dalia Sebat");
 		encrypt.close();
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
