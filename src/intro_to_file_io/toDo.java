@@ -79,7 +79,7 @@ public class toDo implements ActionListener {
 		} else if (e.getSource() == button3) {
 			String finalList2 = "";
 			for (int i = 0; i < list.size(); i++) {
-				finalList2 += i + " " + list.get(i) + "\n";
+				finalList2 += list.get(i) + "\n";
 			}
 			try {
 				FileWriter w = new FileWriter("src/intro_to_file_io/encrypt.txt");
